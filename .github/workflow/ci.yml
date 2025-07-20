@@ -1,10 +1,26 @@
-name: Hello CI
+name : React CI (Yarn)
 
-on: [push]
+on : 
+  push : [main]
+  pull_request : [main]
 
-jobs:
-  say-hello:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Dire bonjour
-        run: echo "Hello depuis GitHub Actions !"
+jobs : 
+  build:
+      runs-on: ubuntu-latest
+      steps:
+            - name: Checkout du code
+              uses: actions/checkout@v4
+
+            - name: Installer Node.js
+              uses: actions/setup-node@v4
+              with:
+                node-version: '18'
+
+            - name: Installer Yarn
+              run: corepack enable
+
+            - name: Installer les dépendances avec Yarn
+              run: yarn install --frozen-lockfile
+
+            - name: Compiler le projet React
+              run: yarn build
