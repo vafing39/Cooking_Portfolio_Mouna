@@ -21,7 +21,7 @@ const RecipeDetail = () => {
   const [recette, setRecette] = useState<any>(null);
 
   useEffect(()=>{
-     const found = recettes.find((item: any) => item.id === id);
+     const found = recettes.find((item: any) => item.id === Number(id));
     setRecette(found || null);
   }, [id])
   
