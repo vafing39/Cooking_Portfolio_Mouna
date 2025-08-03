@@ -1,92 +1,12 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Search, Filter, Star, Clock, Users, Heart } from 'lucide-react'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Search, Filter, Star, Clock, Users, Heart } from 'lucide-react';
+import recettes from '../constantes/recettes';
 
 const Recipes = () => {
-  const [searchTerm, setSearchTerm] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [selectedCountry, setSelectedCountry] = useState('all')
-
-  const recipes = [
-    {
-      id: 1,
-      title: 'Couscous Royal Marocain',
-      description: 'Un plat traditionnel aux saveurs authentiques du Maroc',
-      country: 'Maroc',
-      image: 'https://images.pexels.com/photos/6210959/pexels-photo-6210959.jpeg?auto=compress&cs=tinysrgb&w=600',
-      time: '2h 30min',
-      difficulty: 'Intermédiaire',
-      rating: 4.8,
-      category: 'Plat principal',
-      servings: 6,
-      tags: ['épicé', 'festif', 'traditionnel']
-    },
-    {
-      id: 2,
-      title: 'Pad Thaï Authentique',
-      description: 'Nouilles sautées thaïlandaises avec crevettes et cacahuètes',
-      country: 'Thaïlande',
-      image: 'https://images.pexels.com/photos/4958792/pexels-photo-4958792.jpeg?auto=compress&cs=tinysrgb&w=600',
-      time: '25min',
-      difficulty: 'Facile',
-      rating: 4.9,
-      category: 'Plat principal',
-      servings: 4,
-      tags: ['rapide', 'asiatique', 'nouilles']
-    },
-    {
-      id: 3,
-      title: 'Tiramisu Italien',
-      description: 'Le dessert italien emblématique, crémeux et parfumé',
-      country: 'Italie',
-      image: 'https://images.pexels.com/photos/6880219/pexels-photo-6880219.jpeg?auto=compress&cs=tinysrgb&w=600',
-      time: '4h',
-      difficulty: 'Facile',
-      rating: 4.7,
-      category: 'Dessert',
-      servings: 8,
-      tags: ['café', 'crémeux', 'italien']
-    },
-    {
-      id: 4,
-      title: 'Sushi Maki Maison',
-      description: 'Apprenez à préparer des sushis comme un chef japonais',
-      country: 'Japon',
-      image: 'https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=600',
-      time: '1h 30min',
-      difficulty: 'Difficile',
-      rating: 4.6,
-      category: 'Entrée',
-      servings: 4,
-      tags: ['japonais', 'poisson', 'technique']
-    },
-    {
-      id: 5,
-      title: 'Paella Valencienne',
-      description: 'La vraie recette espagnole avec safran et fruits de mer',
-      country: 'Espagne',
-      image: 'https://images.pexels.com/photos/16743294/pexels-photo-16743294.jpeg?auto=compress&cs=tinysrgb&w=600',
-      time: '45min',
-      difficulty: 'Intermédiaire',
-      rating: 4.8,
-      category: 'Plat principal',
-      servings: 6,
-      tags: ['riz', 'fruits de mer', 'safran']
-    },
-    {
-      id: 6,
-      title: 'Baklava Turc',
-      description: 'Pâtisserie feuilletée aux noix et sirop de miel',
-      country: 'Turquie',
-      image: 'https://images.pexels.com/photos/7474467/pexels-photo-7474467.jpeg?auto=compress&cs=tinysrgb&w=600',
-      time: '2h',
-      difficulty: 'Intermédiaire',
-      rating: 4.5,
-      category: 'Dessert',
-      servings: 12,
-      tags: ['sucré', 'noix', 'miel']
-    }
-  ]
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCountry, setSelectedCountry] = useState('all');
 
   const categories = [
     { value: 'all', label: 'Toutes les catégories' },
@@ -94,8 +14,8 @@ const Recipes = () => {
     { value: 'plat principal', label: 'Plats principaux' },
     { value: 'dessert', label: 'Desserts' },
     { value: 'amuse-bouche', label: 'Amuse-bouches' },
-    { value: 'boisson', label: 'Boissons' }
-  ]
+    { value: 'boisson', label: 'Boissons' },
+  ];
 
   const countries = [
     { value: 'all', label: 'Tous les pays' },
@@ -104,18 +24,25 @@ const Recipes = () => {
     { value: 'italie', label: 'Italie' },
     { value: 'japon', label: 'Japon' },
     { value: 'espagne', label: 'Espagne' },
-    { value: 'turquie', label: 'Turquie' }
-  ]
+    { value: 'turquie', label: 'Turquie' },
+  ];
 
-  const filteredRecipes = recipes.filter(recipe => {
-    const matchesSearch = recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         recipe.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         recipe.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-    const matchesCategory = selectedCategory === 'all' || recipe.category.toLowerCase() === selectedCategory
-    const matchesCountry = selectedCountry === 'all' || recipe.country.toLowerCase() === selectedCountry
-    
-    return matchesSearch && matchesCategory && matchesCountry
-  })
+  const filteredRecipes = recettes.filter((recipe) => {
+    const matchesSearch =
+      recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      recipe.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      recipe.tags.some((tag) =>
+        tag.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    const matchesCategory =
+      selectedCategory === 'all' ||
+      recipe.category.toLowerCase() === selectedCategory;
+    const matchesCountry =
+      selectedCountry === 'all' ||
+      recipe.country.toLowerCase() === selectedCountry;
+
+    return matchesSearch && matchesCategory && matchesCountry;
+  });
 
   return (
     <div className="min-h-screen py-8">
@@ -126,7 +53,7 @@ const Recipes = () => {
             Nos <span className="text-gradient">Recettes</span>
           </h1>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-            Découvrez notre collection de recettes authentiques du monde entier, 
+            Découvrez notre collection de recettes authentiques du monde entier,
             soigneusement sélectionnées et testées par Chef Amina
           </p>
         </div>
@@ -155,7 +82,7 @@ const Recipes = () => {
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               >
-                {categories.map(category => (
+                {categories.map((category) => (
                   <option key={category.value} value={category.value}>
                     {category.label}
                   </option>
@@ -170,7 +97,7 @@ const Recipes = () => {
                 onChange={(e) => setSelectedCountry(e.target.value)}
                 className="w-full px-4 py-3 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               >
-                {countries.map(country => (
+                {countries.map((country) => (
                   <option key={country.value} value={country.value}>
                     {country.label}
                   </option>
@@ -183,7 +110,9 @@ const Recipes = () => {
         {/* Results Count */}
         <div className="flex items-center justify-between mb-8">
           <p className="text-neutral-600">
-            {filteredRecipes.length} recette{filteredRecipes.length !== 1 ? 's' : ''} trouvée{filteredRecipes.length !== 1 ? 's' : ''}
+            {filteredRecipes.length} recette
+            {filteredRecipes.length !== 1 ? 's' : ''} trouvée
+            {filteredRecipes.length !== 1 ? 's' : ''}
           </p>
           <button className="flex items-center gap-2 text-neutral-600 hover:text-primary-500 transition-colors">
             <Filter className="w-5 h-5" />
@@ -194,6 +123,7 @@ const Recipes = () => {
         {/* Recipe Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredRecipes.map((recipe) => (
+            
             <Link
               key={recipe.id}
               to={`/recipe/${recipe.id}`}
@@ -209,10 +139,12 @@ const Recipes = () => {
                   <Heart className="w-5 h-5 text-neutral-600 hover:text-red-500" />
                 </button>
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1">
-                  <span className="text-sm font-medium text-neutral-800">{recipe.country}</span>
+                  <span className="text-sm font-medium text-neutral-800">
+                    {recipe.country}
+                  </span>
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="flex items-center gap-1">
@@ -220,17 +152,19 @@ const Recipes = () => {
                     <span className="text-sm font-medium">{recipe.rating}</span>
                   </div>
                   <span className="text-neutral-300">•</span>
-                  <span className="text-sm text-neutral-600">{recipe.category}</span>
+                  <span className="text-sm text-neutral-600">
+                    {recipe.category}
+                  </span>
                 </div>
-                
+
                 <h3 className="text-xl font-semibold text-neutral-800 mb-2 group-hover:text-primary-500 transition-colors">
                   {recipe.title}
                 </h3>
-                
+
                 <p className="text-neutral-600 mb-4 line-clamp-2">
                   {recipe.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {recipe.tags.slice(0, 2).map((tag, index) => (
                     <span
@@ -241,7 +175,7 @@ const Recipes = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex items-center justify-between text-sm text-neutral-500">
                   <div className="flex items-center gap-1">
                     <Clock className="w-4 h-4" />
@@ -272,9 +206,9 @@ const Recipes = () => {
             </p>
             <button
               onClick={() => {
-                setSearchTerm('')
-                setSelectedCategory('all')
-                setSelectedCountry('all')
+                setSearchTerm('');
+                setSelectedCategory('all');
+                setSelectedCountry('all');
               }}
               className="btn-primary"
             >
@@ -284,7 +218,7 @@ const Recipes = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Recipes
+export default Recipes;
