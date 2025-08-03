@@ -21,11 +21,8 @@ const RecipeDetail = () => {
   const [recette, setRecette] = useState<any>(null);
 
   useEffect(()=>{
-     recettes.map( (item: any) => {
-      if(item.id === Number(id) ) {
-        setRecette(item)
-      }
-    })
+     const found = recettes.find((item: any) => item.id === id);
+    setRecette(found || null);
   }, [id])
   
   const toggleStepCompletion = (stepNumber: number) => {
