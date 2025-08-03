@@ -19,13 +19,13 @@ const Footer = () => {
               traditionnelles et nos services traiteur de qualité.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-neutral-400 hover:text-primary-500 transition-colors">
+              <a href="https://www.instagram.com/?hl=fr" className="text-neutral-400 hover:text-primary-500 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-neutral-400 hover:text-primary-500 transition-colors">
+              <a href="https://www.facebook.com" className="text-neutral-400 hover:text-primary-500 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-neutral-400 hover:text-primary-500 transition-colors">
+              <a href="https://www.youtube.com" className="text-neutral-400 hover:text-primary-500 transition-colors">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
@@ -68,27 +68,27 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-neutral-300 hover:text-white transition-colors">
+                <a href="https://www.facebook.com" className="text-neutral-300 hover:text-white transition-colors">
                   Mariages
                 </a>
               </li>
               <li>
-                <a href="#" className="text-neutral-300 hover:text-white transition-colors">
+                <a href="https://www.facebook.com" className="text-neutral-300 hover:text-white transition-colors">
                   Événements privés
                 </a>
               </li>
               <li>
-                <a href="#" className="text-neutral-300 hover:text-white transition-colors">
+                <a href="https://www.facebook.com" className="text-neutral-300 hover:text-white transition-colors">
                   Cours de cuisine
                 </a>
               </li>
               <li>
-                <a href="#" className="text-neutral-300 hover:text-white transition-colors">
+                <a href="https://www.facebook.com" className="text-neutral-300 hover:text-white transition-colors">
                   Consultation culinaire
                 </a>
               </li>
               <li>
-                <a href="#" className="text-neutral-300 hover:text-white transition-colors">
+                <a href="https://www.facebook.com" className="text-neutral-300 hover:text-white transition-colors">
                   Livraison
                 </a>
               </li>
