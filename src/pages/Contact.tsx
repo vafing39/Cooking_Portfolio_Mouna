@@ -178,7 +178,7 @@ const Contact = () => {
               
               <div className="space-y-4">
                 <a 
-                  href="#" 
+                  href="https://www.youtube.com" 
                   className="flex items-center gap-4 p-4 bg-neutral-50 rounded-lg hover:bg-primary-50 transition-colors group"
                 >
                   <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
@@ -193,7 +193,7 @@ const Contact = () => {
                 </a>
                 
                 <a 
-                  href="#" 
+                  href="https://www.youtube.com" 
                   className="flex items-center gap-4 p-4 bg-neutral-50 rounded-lg hover:bg-primary-50 transition-colors group"
                 >
                   <div className="p-2 bg-blue-600 rounded-lg">
@@ -208,7 +208,7 @@ const Contact = () => {
                 </a>
                 
                 <a 
-                  href="#" 
+                  href="https://www.youtube.com" 
                   className="flex items-center gap-4 p-4 bg-neutral-50 rounded-lg hover:bg-primary-50 transition-colors group"
                 >
                   <div className="p-2 bg-red-600 rounded-lg">

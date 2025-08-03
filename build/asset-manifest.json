@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c13bae80.css",
+    "main.js": "/static/js/main.b915948e.js",
+    "static/media/frites_lardons.webp": "/static/media/frites_lardons.067c7448f18a85ad3329.webp",
+    "static/media/boulettes_poulet.webp": "/static/media/boulettes_poulet.b00f550570c81b556b7e.webp",
+    "static/media/tagliatèle_saumon_curry.webp": "/static/media/tagliatèle_saumon_curry.061f35bbe55cf43c51ab.webp",
+    "index.html": "/index.html",
+    "main.c13bae80.css.map": "/static/css/main.c13bae80.css.map",
+    "main.b915948e.js.map": "/static/js/main.b915948e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c13bae80.css",
+    "static/js/main.b915948e.js"
+  ]
+}

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Calendar, Users, MapPin, Star, Check, Mail, Phone } from 'lucide-react'
+import { /* Calendar */ Users, /* MapPin */ Star, Check, Mail, Phone } from 'lucide-react'
 
 const Catering = () => {
   const [selectedService, setSelectedService] = useState('')
@@ -13,7 +13,7 @@ const Catering = () => {
     location: '',
     message: ''
   })
-
+  
   const services = [
     {
       id: 'baby-shower',
@@ -125,7 +125,7 @@ const Catering = () => {
           </h1>
           <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
             Confiez-nous l'organisation culinaire de vos événements les plus précieux. 
-            Des saveurs authentiques du monde entier pour des moments inoubliables.
+            Des saveurs authentiques du monde entier pour des moments inoubliables. {selectedService}
           </p>
         </div>
 
