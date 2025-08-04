@@ -101,11 +101,11 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-primary-500" />
-                <span className="text-neutral-300">+33 6 12 34 56 78</span>
+                <span className="text-neutral-300">+33 7 54 40 55 17</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-primary-500" />
-                <span className="text-neutral-300">contact@chefamina.fr</span>
+                <span className="text-neutral-300">mounak.traiteur@gmail.com</span>
               </li>
               <li className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-primary-500" />
@@ -126,7 +126,7 @@ const Footer = () => {
             <div className="flex items-center space-x-1 text-sm text-neutral-400 mt-2 md:mt-0">
               <span>Créé avec</span>
               <Heart className="w-4 h-4 text-red-500 fill-current" />
-              <span>par Chef Amina</span>
+              <span>par Chef Mouna</span>
             </div>
           </div>
         </div>

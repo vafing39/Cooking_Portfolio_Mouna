@@ -25,7 +25,7 @@ const Navbar = () => {
             <div className="p-2 bg-gradient-to-r from-primary-500 to-accent-500 rounded-lg group-hover:scale-110 transition-transform duration-300">
               <ChefHat className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-gradient">Chef Amina</span>
+            <span className="text-xl font-bold text-gradient">Chef Mouna</span>
           </Link>
 
           {/* Desktop Navigation */}
