@@ -113,6 +113,7 @@ const Catering = () => {
     // Handle form submission
     console.log('Form submitted:', formData)
     alert('Votre demande a été envoyée ! Nous vous recontacterons sous 24h.')
+    //envoyer un mail à  mounak.traiteur@gmail.com
   }
 
   return (
@@ -359,19 +360,19 @@ const Catering = () => {
               <Phone className="w-6 h-6" />
               <div>
                 <p className="font-semibold">Téléphone</p>
-                <p className="text-white/90">+33 6 12 34 56 78</p>
+                <p className="text-white/90">+33 7 54 40 55 17</p>
               </div>
             </div>
             <div className="flex items-center justify-center gap-3 text-white">
               <Mail className="w-6 h-6" />
               <div>
                 <p className="font-semibold">Email</p>
-                <p className="text-white/90">contact@chefamina.fr</p>
+                <p className="text-white/90">mounak.traiteur@gmail.com</p>
               </div>
             </div>
           </div>
           <p className="text-white/90 mt-6">
-            Réponse garantie sous 24h • Devis gratuit • Déplacement dans toute la région
+            Réponse garantie sous 24h • Devis gratuit • Déplacement en France et à l'étranger
           </p>
         </div>
       </div>
