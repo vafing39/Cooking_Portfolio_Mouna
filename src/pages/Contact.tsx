@@ -21,6 +21,7 @@ const Contact = () => {
     // Handle form submission
     console.log('Form submitted:', formData)
     alert('Votre message a été envoyé ! Nous vous répondrons rapidement.')
+    // Envoyer un mail a mounak.traiteur@gmail.com  
   }
 
   return (
@@ -130,7 +131,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-neutral-800 mb-1">Téléphone</h3>
-                    <p className="text-neutral-600">+33 6 12 34 56 78</p>
+                    <p className="text-neutral-600">+33 7 54 40 55 17</p>
                     <p className="text-sm text-neutral-500">Lundi - Vendredi : 9h - 18h</p>
                   </div>
                 </div>
@@ -141,7 +142,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-neutral-800 mb-1">Email</h3>
-                    <p className="text-neutral-600">contact@chefamina.fr</p>
+                    <p className="text-neutral-600">mounak.traiteur@gmail.com</p>
                     <p className="text-sm text-neutral-500">Réponse sous 24h</p>
                   </div>
                 </div>
@@ -153,7 +154,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-neutral-800 mb-1">Localisation</h3>
                     <p className="text-neutral-600">Paris et région parisienne</p>
-                    <p className="text-sm text-neutral-500">Déplacement possible</p>
+                    <p className="text-sm text-neutral-500">Déplacement possible dans toute la france</p>
                   </div>
                 </div>
                 
@@ -178,7 +179,7 @@ const Contact = () => {
               
               <div className="space-y-4">
                 <a 
-                  href="https://www.youtube.com" 
+                  href="https://www.instagram.com/mounacaime?igsh=d2t0OHR1eXRmb2dx&utm_source=qr" 
                   className="flex items-center gap-4 p-4 bg-neutral-50 rounded-lg hover:bg-primary-50 transition-colors group"
                 >
                   <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg">
@@ -193,7 +194,7 @@ const Contact = () => {
                 </a>
                 
                 <a 
-                  href="https://www.youtube.com" 
+                  href="https://www.tiktok.com/@mounacaime?_t=ZN-8yeGPHzC5MU&_r=1" 
                   className="flex items-center gap-4 p-4 bg-neutral-50 rounded-lg hover:bg-primary-50 transition-colors group"
                 >
                   <div className="p-2 bg-blue-600 rounded-lg">
@@ -201,14 +202,14 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-neutral-800 group-hover:text-primary-500 transition-colors">
-                      Facebook
+                      Tik tok
                     </h3>
                     <p className="text-sm text-neutral-600">Chef Amina Cuisine</p>
                   </div>
                 </a>
                 
                 <a 
-                  href="https://www.youtube.com" 
+                  href="https://t.snapchat.com/39ZpYDzK" 
                   className="flex items-center gap-4 p-4 bg-neutral-50 rounded-lg hover:bg-primary-50 transition-colors group"
                 >
                   <div className="p-2 bg-red-600 rounded-lg">
@@ -216,7 +217,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-neutral-800 group-hover:text-primary-500 transition-colors">
-                      YouTube
+                      Snapchat
                     </h3>
                     <p className="text-sm text-neutral-600">Chef Amina</p>
                   </div>
